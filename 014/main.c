@@ -1,36 +1,28 @@
+#include <stdlib.h>
 #include <stdio.h>
 
-int calc_chain_length(int n) {
-	int i = 1;
-
-	while(1) {
-		if (n == 1) {
-			break;
-		}
-
-		if (n % 2 == 0) {
-			n /= 2;
-		} else {
-			n = 3 * n + 1;
-		}
-
-		i++;
-	}
-
-	return i;
-}
+#include "tree.h"
 
 int main(int argc, char* argv[]) {
-	int i, j;
-	int r = 0;
+	tree_t* t;
+	unsigned long i;
+	unsigned long j;
+	unsigned long k;
+	unsigned long l;
 
-	for(i = 1; i < 1000000; i++) {
-		j = calc_chain_length(j);
-		if (r < j) {
-			r = j;
+	t = create_tree(1000000);
+
+	k = 0;
+	for (i = 0; i < 1000000; i++) {
+		j = get_seq_len(t->nodes[i]);
+
+		if (j > k) {
+			k = j;
+			l = i;
 		}
 	}
 
-	printf("%d\n", r);
-	return 0;
+	printf("%lu: %lu\n", l, k);
+
+	destroy_tree(t);
 }

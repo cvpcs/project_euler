@@ -1,0 +1,26 @@
+combinatorical problem, no need for program.
+
+We are talking about a multiset S such that
+
+	S = {20 * D, 20 * R}
+
+where D is a down movement and R is a right movement.  The solution to the
+problem is the number of permutation of that set which is equal to
+
+	n! / n1!n2!
+
+where n = 40 (number of total items) and n1 = n2 = 20 (number of individual
+items).  This can be simplified (since there are only two types of objects)
+to
+
+	n! / n1!(n - n1!)
+
+or simply
+
+	C(n, n1)
+
+where C is the combination function.
+
+Hence the answer is
+
+	C(40, 20) = 137846528820
