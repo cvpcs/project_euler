@@ -5,11 +5,11 @@
 int is_palendrome(int n) {
 	char* str;
 	int i;
-	int j;
+	unsigned long long j;
 	int r;
 
 	str = (char*)malloc(256 * sizeof(char));
-	sprintf(str, "%d", n);
+	sprintf_s(str, 256, "%d", n);
 
 	i = 0;
 	j = strlen(str) - 1;

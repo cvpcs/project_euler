@@ -11,7 +11,7 @@ int main(int argc, char* argv[]) {
 	while(d > 1) {
 		for(i = 2; i < 600851475143; i++) {
 			if(d % i == (uint64_t)0) {
-				printf("%d\n", i);
+				printf("%llu\n", i);
 				d = d / i;
 				break;
 			}

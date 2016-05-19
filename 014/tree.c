@@ -63,8 +63,6 @@ tree_t* create_tree(unsigned long size) {
 
 void destroy_tree(tree_t* t) {
 	unsigned long i;
-	node_t* n;
-	node_t* m;
 
 	for (i = 0; i < t->num_nodes; i++) {
 		destroy_node(t->nodes[i]);

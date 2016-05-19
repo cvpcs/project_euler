@@ -3,44 +3,45 @@
 #include <string.h>
 
 char* n2s(int n) {
-	char* str = (char*)malloc(255 * sizeof(char));
+	rsize_t strSize = 255;
+	char* str = (char*)malloc(strSize * sizeof(char));
 	int i;
 
 	if (n == 0) {
-		strcpy(str, "");
+		strcpy_s(str, strSize, "");
 	}
 
 	if (n < 10) {
 		switch(n) {
 			case 1:
-				strcpy(str, "one");
+				strcpy_s(str, strSize, "one");
 				break;
 			case 2:
-				strcpy(str, "two");
+				strcpy_s(str, strSize, "two");
 				break;
 			case 3:
-				strcpy(str, "three");
+				strcpy_s(str, strSize, "three");
 				break;
 			case 4:
-				strcpy(str, "four");
+				strcpy_s(str, strSize, "four");
 				break;
 			case 5:
-				strcpy(str, "five");
+				strcpy_s(str, strSize, "five");
 				break;
 			case 6:
-				strcpy(str, "six");
+				strcpy_s(str, strSize, "six");
 				break;
 			case 7:
-				strcpy(str, "seven");
+				strcpy_s(str, strSize, "seven");
 				break;
 			case 8:
-				strcpy(str, "eight");
+				strcpy_s(str, strSize, "eight");
 				break;
 			case 9:
-				strcpy(str, "nine");
+				strcpy_s(str, strSize, "nine");
 				break;
-			defaut:
-				strcpy(str, "");
+			default:
+				strcpy_s(str, strSize, "");
 				break;
 		}
 
@@ -50,34 +51,34 @@ char* n2s(int n) {
 	if (n > 10 && n < 20) {
 		switch(n) {
 			case 11:
-				strcpy(str, "eleven");
+				strcpy_s(str, strSize, "eleven");
 				break;
 			case 12:
-				strcpy(str, "twelve");
+				strcpy_s(str, strSize, "twelve");
 				break;
 			case 13:
-				strcpy(str, "thirteen");
+				strcpy_s(str, strSize, "thirteen");
 				break;
 			case 14:
-				strcpy(str, "fourteen");
+				strcpy_s(str, strSize, "fourteen");
 				break;
 			case 15:
-				strcpy(str, "fifteen");
+				strcpy_s(str, strSize, "fifteen");
 				break;
 			case 16:
-				strcpy(str, "sixteen");
+				strcpy_s(str, strSize, "sixteen");
 				break;
 			case 17:
-				strcpy(str, "seventeen");
+				strcpy_s(str, strSize, "seventeen");
 				break;
 			case 18:
-				strcpy(str, "eighteen");
+				strcpy_s(str, strSize, "eighteen");
 				break;
 			case 19:
-				strcpy(str, "nineteen");
+				strcpy_s(str, strSize, "nineteen");
 				break;
 			default:
-				strcpy(str, "");
+				strcpy_s(str, strSize, "");
 				break;
 		}
 
@@ -88,59 +89,61 @@ char* n2s(int n) {
 		i = n / 10;
 		switch(i) {
 			case 1:
-				strcpy(str, "ten");
+				strcpy_s(str, strSize, "ten");
 				break;
 			case 2:
-				strcpy(str, "twenty");
+				strcpy_s(str, strSize, "twenty");
 				break;
 			case 3:
-				strcpy(str, "thirty");
+				strcpy_s(str, strSize, "thirty");
 				break;
 			case 4:
-				strcpy(str, "forty");
+				strcpy_s(str, strSize, "forty");
 				break;
 			case 5:
-				strcpy(str, "fifty");
+				strcpy_s(str, strSize, "fifty");
 				break;
 			case 6:
-				strcpy(str, "sixty");
+				strcpy_s(str, strSize, "sixty");
 				break;
 			case 7:
-				strcpy(str, "seventy");
+				strcpy_s(str, strSize, "seventy");
 				break;
 			case 8:
-				strcpy(str, "eighty");
+				strcpy_s(str, strSize, "eighty");
 				break;
 			case 9:
-				strcpy(str, "ninety");
+				strcpy_s(str, strSize, "ninety");
 				break;
 			default:
-				strcpy(str, "");
+				strcpy_s(str, strSize, "");
 				break;
 		}
 
 		i = n % 10;
-		return strcat(str, n2s(i));
+		strcat_s(str, strSize, n2s(i));
+		return str;
 	}
 
 	if (n < 1000) {
 		i = n / 100;
-		strcpy(str, n2s(i));
-		strcat(str, "hundred");
+		strcpy_s(str, strSize, n2s(i));
+		strcat_s(str, strSize, "hundred");
 		i = n % 100;
 		if (i != 0) {
-			strcat(str, "and");
-			strcat(str, n2s(i));
+			strcat_s(str, strSize, "and");
+			strcat_s(str, strSize, n2s(i));
 		}
 		return str;
 	}
 
-	return strcpy(str, "onethousand");
+	strcpy_s(str, strSize, "onethousand");
+	return str;
 }
 
 int main(int argc, char* argv[]) {
 	int i;
-	int c = 0;
+	size_t c = 0;
 	char* str;
 	for (i = 1; i < 1001; i++) {
 		str = n2s(i);
@@ -148,6 +151,6 @@ int main(int argc, char* argv[]) {
 		printf("%s\n", str);
 		free(str);
 	}
-	printf("%d\n", c);
+	printf("%llu\n", c);
 	return 0;
 }

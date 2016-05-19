@@ -23,10 +23,10 @@ int main(int argc, char* argv[]) {
 	n = 0;
 	i = 1;
 	r = 1;
-	r = scanf("%s", s);
+	r = scanf_s("%s", s, 512);
 	while (r != EOF) {
 		n += score(s) * i++;
-		r = scanf("%s", s);
+		r = scanf_s("%s", s, 512);
 	}
 
 	printf("%d\n", n);

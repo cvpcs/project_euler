@@ -6,7 +6,7 @@ int is_triangle_word(char* s) {
 	int i;
 	int t;
 	int j = 0;
-	int l = strlen(s);
+	size_t l = strlen(s);
 
 	for (i = 0; i < l; i++) {
 		j += s[i] - 64;

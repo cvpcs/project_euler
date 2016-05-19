@@ -18,7 +18,7 @@ int main(int argc, char* argv[]) {
 		p = (int**)realloc(p, sizeof(int*) * (i + 1));
 		p[i] = (int*)malloc(sizeof(int) * (i + 1));
 		for (j = 0; j < (i + 1); j++) {
-			r = scanf("%d", &v);
+			r = scanf_s("%d", &v);
 			p[i][j] = v;
 		}
 		i++;

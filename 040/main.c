@@ -5,12 +5,11 @@
 int main(int argc, char* argv) {
 	char s[1100000];
 	int i;
-	int l;
 
 	s[0] = '\0';
 
 	for(i = 1; strlen(s) < 1000000; i++) {
-		sprintf(s + strlen(s), "%d", i);
+		sprintf_s(s + strlen(s), 1100000, "%d", i);
 	}
 
 	printf("%c x %c x %c x %c x %c x %c x %c\n",

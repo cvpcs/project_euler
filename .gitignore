@@ -1,1 +1,7 @@
+.vs
+*.user
+*.opendb
+*.sdf
 a.out
+Debug
+Release
