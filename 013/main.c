@@ -14,7 +14,7 @@ int main(int argc, char* argv[]) {
 
 	while(1) {
 		str = (char*)malloc(256 * sizeof(char));
-		gets(str);
+		gets_s(str, 255);
 		printf("Found number: \"%s\"\n", str);
 
 		if(strlen(str) == 0) {

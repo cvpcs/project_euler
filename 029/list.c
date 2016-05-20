@@ -38,7 +38,6 @@ void destroy_list(list_t l) {
 
 void insert_node(list_t l, node_t n) {
 	node_t m;
-	int i;
 
 	if (l->first == NULL) {
 		l->first = n;

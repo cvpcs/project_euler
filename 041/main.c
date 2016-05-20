@@ -37,7 +37,7 @@ int main(int argc, char* argv) {
 		}
 	}
 
-	free(destroy_prime_list);
+	destroy_prime_list(prime_list);
 
 	return 0;
 }

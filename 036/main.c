@@ -7,8 +7,8 @@ int is_dual_palendrome(int n) {
 	mpz_t m;	
 	char* s;
 
-	int i;
-	int j;
+	unsigned int i;
+	size_t j;
 	int r;
 
 	mpz_init(m);
@@ -52,4 +52,6 @@ int main(int argc, char* argv[]) {
 	}
 
 	printf("%d\n", j);
+
+	return 0;
 }

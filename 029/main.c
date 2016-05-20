@@ -10,7 +10,7 @@ int main(int argc, char* argv[]) {
 	mpz_t m;
 	int a;
 	int b;
-	int i;
+	int i = 0;
 
 	l = create_list();
 

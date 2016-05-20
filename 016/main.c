@@ -8,7 +8,6 @@ int main(int argc, char* argv[]) {
 	mpz_t m;
 	char* str;
 	char* buf;
-	int i;
 
 	mpz_init(n);
 	mpz_init(m);
@@ -22,7 +21,7 @@ int main(int argc, char* argv[]) {
 
 	buf = (char*)malloc(2 * sizeof(char));
 
-	for(i = 0; i < strlen(str); ++i) {
+	for(unsigned int i = 0; i < strlen(str); ++i) {
 		buf[0] = str[i];
 		buf[1] = '\0';
 		mpz_set_str(m, buf, 10);

@@ -71,7 +71,28 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "067", "067\067.vcxproj", "{
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "041", "041\041.vcxproj", "{4D72D4B5-1B93-4D8D-8097-96B770064294}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Utils", "Utils\Utils.vcxitems", "{45D41ACC-2C3C-43D2-BC10-02AA73FFC7C7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GMP", "GMP\GMP.vcxitems", "{976A4758-F3B9-4B32-A43B-B831CE7E7B75}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		GMP\GMP.vcxitems*{0eaa2f6b-f942-41b8-9da1-7c6a444eb07b}*SharedItemsImports = 4
+		GMP\GMP.vcxitems*{4060515b-7cc2-4434-a6a2-a639e5b403c7}*SharedItemsImports = 4
+		GMP\GMP.vcxitems*{2d8c441e-1847-4505-85e4-9fadb9483372}*SharedItemsImports = 4
+		GMP\GMP.vcxitems*{a5ccedc7-6b35-4c75-96cc-7053d9b2b028}*SharedItemsImports = 4
+		Utils\Utils.vcxitems*{4d72d4b5-1b93-4d8d-8097-96b770064294}*SharedItemsImports = 4
+		GMP\GMP.vcxitems*{4bf97eb3-3889-4aca-9d1f-b259ad6a7aa0}*SharedItemsImports = 4
+		GMP\GMP.vcxitems*{23603f47-e8ec-465f-89da-0ef581303d5d}*SharedItemsImports = 4
+		GMP\GMP.vcxitems*{976a4758-f3b9-4b32-a43b-b831ce7e7b75}*SharedItemsImports = 9
+		GMP\GMP.vcxitems*{ae13bcce-85da-49ba-b60d-23af9f6c1e19}*SharedItemsImports = 4
+		GMP\GMP.vcxitems*{19c2f0b5-882d-4f57-88c9-84031ab97b7a}*SharedItemsImports = 4
+		GMP\GMP.vcxitems*{b81847f5-0266-44f0-be91-9875083f9c1a}*SharedItemsImports = 4
+		Utils\Utils.vcxitems*{db00da47-0d98-4f77-88c1-952d9f063999}*SharedItemsImports = 4
+		GMP\GMP.vcxitems*{ddab05a2-637d-45b4-9b96-f31cd34eabb6}*SharedItemsImports = 4
+		Utils\Utils.vcxitems*{45d41acc-2c3c-43d2-bc10-02aa73ffc7c7}*SharedItemsImports = 9
+		GMP\GMP.vcxitems*{0ed94632-0ad3-4e1a-860e-732b04bb05e4}*SharedItemsImports = 4
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86

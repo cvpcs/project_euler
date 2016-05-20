@@ -57,7 +57,6 @@ int is_tr_r(mpz_t n) {
 int main(int argc, char* argv[]) {
 	mpz_t n, m;
 	char* s;
-	int i, j;
 
 	mpz_init(n);
 	mpz_init(m);
@@ -65,7 +64,7 @@ int main(int argc, char* argv[]) {
 	mpz_set_ui(m, 0);
 	mpz_nextprime(n, n);
 
-	i = 0;
+	int i = 0;
 
 	while(i < 11) {
 		if (is_tr_l(n) && is_tr_r(n)) {

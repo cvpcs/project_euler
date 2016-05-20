@@ -3,11 +3,8 @@
 #include <string.h>
 
 int score(char* s) {
-	int i;
-	int n;
-
-	n = 0;
-	for (i = 0; i < strlen(s); i++) {
+	int n = 0;
+	for (unsigned int i = 0; i < strlen(s); i++) {
 		n += (s[i] - 64);
 	}
 

@@ -4,11 +4,8 @@
 #include <gmp.h>
 
 int find_max() {
-	mpz_t n;
-	mpz_t m;
-	int i;
-	int j;
-	int r;
+	mpz_t n, m;
+	unsigned int i, j, r;
 	char* s;
 
 	mpz_init(n);
@@ -40,10 +37,8 @@ int find_max() {
 int is_fac_sum(mpz_t n) {
 	char* s;
 	char* b;
-	int i;
 	int r;
-	mpz_t l;
-	mpz_t m;
+	mpz_t l, m;
 
 	b = (char*)malloc(sizeof(char) * 2);
 	b[0] = '0';
@@ -54,7 +49,7 @@ int is_fac_sum(mpz_t n) {
 	mpz_init(m);
 	mpz_set_ui(m, 0);
 
-	for (i = 0; i < strlen(s); i++) {
+	for (unsigned int i = 0; i < strlen(s); i++) {
 		b[0] = s[i];
 
 		mpz_fac_ui(l, atoi(b));

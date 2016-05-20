@@ -151,6 +151,6 @@ int main(int argc, char* argv[]) {
 		printf("%s\n", str);
 		free(str);
 	}
-	printf("%llu\n", c);
+	printf("%llu\n", (unsigned __int64)c);
 	return 0;
 }

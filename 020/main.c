@@ -5,7 +5,7 @@
 
 int main(int argc, char* argv[]) {
 	mpz_t n;
-	int i;
+	unsigned int i;
 	int m;
 	char* s;
 	char b[2];

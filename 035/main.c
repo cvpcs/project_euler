@@ -5,10 +5,9 @@
 
 void rotate_str(char* s) {
 	char c = s[0];
-	int l = strlen(s);
-	int i;
+	size_t l = strlen(s);
 
-	for (i = 1; i < l; i++) {
+	for (unsigned int i = 1; i < l; i++) {
 		s[i - 1] = s[i];
 	}
 
@@ -17,15 +16,13 @@ void rotate_str(char* s) {
 
 int is_circular(mpz_t n) {
 	char* s = mpz_get_str(NULL, 10, n);
-	int l = strlen(s);
+	size_t l = strlen(s);
 	mpz_t m;
-	int i;
-	int r;
 
 	mpz_init(m);
-	r = 1;
+	int r = 1;
 
-	for (i = 0; i < l; i++) {
+	for (unsigned int i = 0; i < l; i++) {
 		mpz_set_str(m, s, 10);
 		if (mpz_probab_prime_p(m, 10) == 0) {
 			r = 0;

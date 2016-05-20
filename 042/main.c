@@ -3,7 +3,7 @@
 #include <string.h>
 
 int is_triangle_word(char* s) {
-	int i;
+	unsigned int i;
 	int t;
 	int j = 0;
 	size_t l = strlen(s);
