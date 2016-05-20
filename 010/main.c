@@ -1,37 +1,21 @@
-#include <stdlib.h>
 #include <stdio.h>
-#include <gmp.h>
+#include <primes.h>
 
 #define MAX 2000000
 
 int main(int argc, char* argv[]) {
-	int i;
-	mpz_t n;
-	mpz_t m;
-	char* str;
+	__int8* prime_list = create_prime_list(MAX);
 
-	mpz_init(n);
-	mpz_init(m);
-	mpz_set_ui(n, 0);
-	mpz_set_ui(m, 0);
-
-	while(1) {
-		mpz_nextprime(n, n);
-		if (mpz_get_ui(n) > MAX) {
-			break;
-		} else {
-			mpz_add(m, n, m);
+	unsigned long long sum = 0;
+	for (int i = 0; i < MAX; i++) {
+		if (is_prime(prime_list, i)) {
+			sum += i;
 		}
 	}
 
-	str = mpz_get_str(NULL, 10, m);
+	printf("%llu\n", sum);
 
-	printf("%s\n", str);
-
-	free(str);
-
-	mpz_clear(n);
-	mpz_clear(m);
+	destroy_prime_list(prime_list);
 
 	return 0;
 }
