@@ -31,6 +31,11 @@ int main(int argc, char* argv[]) {
 
 	printf("Sum of digits: %s\n", str);
 
+	if (strlen(str) > 10)
+		str[10] = '\0';
+
+	printf("First 10 digits: %s\n", str);
+
 	free(str);
 
 	mpz_clear(n);
