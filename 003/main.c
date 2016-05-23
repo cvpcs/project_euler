@@ -1,20 +1,16 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <stdint.h>
+#include <utils.h>
 
 int main(int argc, char* argv[]) {
-	uint64_t d = 600851475143;
-	uint64_t i;
+	uint64_t input = 600851475143;
+	uint64_t* f = factors(input);
 
-	printf("Divisors of 600851475143:\n");
+	printf("Prime factors of %llu:\n", input);
 
-	while(d > 1) {
-		for(i = 2; i < 600851475143; i++) {
-			if(d % i == (uint64_t)0) {
-				printf("%llu\n", i);
-				d = d / i;
-				break;
-			}
-		}
+	for (int i = 0; f[i]; i++) {
+		printf("  %llu\n", f[i]);
 	}
+
+	free(f);
 }

@@ -75,6 +75,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Utils", "Utils\Utils.vcxite
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GMP", "GMP\GMP.vcxitems", "{976A4758-F3B9-4B32-A43B-B831CE7E7B75}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "023", "023\023.vcxproj", "{23B76C1A-516C-47D2-891C-461C9DACD348}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		GMP\GMP.vcxitems*{0eaa2f6b-f942-41b8-9da1-7c6a444eb07b}*SharedItemsImports = 4
@@ -85,9 +87,11 @@ Global
 		GMP\GMP.vcxitems*{4bf97eb3-3889-4aca-9d1f-b259ad6a7aa0}*SharedItemsImports = 4
 		GMP\GMP.vcxitems*{23603f47-e8ec-465f-89da-0ef581303d5d}*SharedItemsImports = 4
 		GMP\GMP.vcxitems*{976a4758-f3b9-4b32-a43b-b831ce7e7b75}*SharedItemsImports = 9
+		Utils\Utils.vcxitems*{841edba1-528b-469c-a56c-d7f9a5a13d0d}*SharedItemsImports = 4
 		GMP\GMP.vcxitems*{ae13bcce-85da-49ba-b60d-23af9f6c1e19}*SharedItemsImports = 4
 		GMP\GMP.vcxitems*{19c2f0b5-882d-4f57-88c9-84031ab97b7a}*SharedItemsImports = 4
 		GMP\GMP.vcxitems*{b81847f5-0266-44f0-be91-9875083f9c1a}*SharedItemsImports = 4
+		Utils\Utils.vcxitems*{23b76c1a-516c-47d2-891c-461c9dacd348}*SharedItemsImports = 4
 		Utils\Utils.vcxitems*{db00da47-0d98-4f77-88c1-952d9f063999}*SharedItemsImports = 4
 		GMP\GMP.vcxitems*{ddab05a2-637d-45b4-9b96-f31cd34eabb6}*SharedItemsImports = 4
 		Utils\Utils.vcxitems*{45d41acc-2c3c-43d2-bc10-02aa73ffc7c7}*SharedItemsImports = 9
@@ -372,6 +376,14 @@ Global
 		{4D72D4B5-1B93-4D8D-8097-96B770064294}.Release|x64.Build.0 = Release|x64
 		{4D72D4B5-1B93-4D8D-8097-96B770064294}.Release|x86.ActiveCfg = Release|Win32
 		{4D72D4B5-1B93-4D8D-8097-96B770064294}.Release|x86.Build.0 = Release|Win32
+		{23B76C1A-516C-47D2-891C-461C9DACD348}.Debug|x64.ActiveCfg = Debug|x64
+		{23B76C1A-516C-47D2-891C-461C9DACD348}.Debug|x64.Build.0 = Debug|x64
+		{23B76C1A-516C-47D2-891C-461C9DACD348}.Debug|x86.ActiveCfg = Debug|Win32
+		{23B76C1A-516C-47D2-891C-461C9DACD348}.Debug|x86.Build.0 = Debug|Win32
+		{23B76C1A-516C-47D2-891C-461C9DACD348}.Release|x64.ActiveCfg = Release|x64
+		{23B76C1A-516C-47D2-891C-461C9DACD348}.Release|x64.Build.0 = Release|x64
+		{23B76C1A-516C-47D2-891C-461C9DACD348}.Release|x86.ActiveCfg = Release|Win32
+		{23B76C1A-516C-47D2-891C-461C9DACD348}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

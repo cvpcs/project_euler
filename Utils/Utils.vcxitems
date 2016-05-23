@@ -14,9 +14,9 @@
     <ProjectCapability Include="SourceItemsFromImports" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="$(MSBuildThisFileDirectory)primes.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)utils.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="$(MSBuildThisFileDirectory)primes.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)utils.c" />
   </ItemGroup>
 </Project>

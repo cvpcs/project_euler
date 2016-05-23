@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <primes.h>
+#include <utils.h>
 
 #define MAX 987654321
 
